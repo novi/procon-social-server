@@ -1,8 +1,12 @@
-import koa from 'koa';
-let app = koa();
+import koa from 'koa'
+let app = koa()
+
+import conf from './conf'
 
 app.use(function *(){
-  this.body = 'Hello World 2';
+  this.body = 'Hello World 2'
 });
 
-app.listen(3000 || process.env.PORT);
+let port = conf.PORT || process.env.PORT
+app.listen(port)
+console.log(`listening on ${port}`)
