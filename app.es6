@@ -1,11 +1,12 @@
 import koa from 'koa'
+import mount from 'koa-mount'
+
 let app = koa()
 
 import conf from './conf'
+import api from './routes/api'
 
-app.use(function *(){
-  this.body = 'Hello World 2'
-});
+app.use(mount('/api', api))
 
 let port = conf.PORT || process.env.PORT
 app.listen(port)
