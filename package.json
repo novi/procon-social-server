@@ -1,0 +1,18 @@
+{
+  "name": "procon-social-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "babel": "~5.8.20",
+    "koa": "~0.21.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "./node_modules/.bin/babel-node --harmony .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-dev": "node-dev --harmony ."
+  },
+  "author": "",
+  "license": "ISC"
+}
