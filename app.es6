@@ -4,6 +4,9 @@ import mount from 'koa-mount'
 let app = koa()
 
 import conf from './conf'
+
+conf.Logger && app.use(conf.Logger())
+
 import api from './routes/api'
 
 app.use(mount('/api', api))
