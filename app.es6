@@ -13,6 +13,6 @@ import api from './routes/api'
 
 app.use(mount('/api', api))
 
-let port = conf.PORT || process.env.PORT
+let port = process.env.PORT || conf.PORT
 app.listen(port)
 console.log(`listening on ${port}`)
