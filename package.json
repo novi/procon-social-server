@@ -22,5 +22,8 @@
     "start-dev": "node-dev --harmony ."
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "engines": {
+    "node" : ">=0.12.0"
+  }
 }
