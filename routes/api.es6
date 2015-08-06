@@ -34,7 +34,7 @@ let fetchTwitterFeed = function *() {
   })
   let get = thunkify(Tw.get.bind(Tw))
   let data = yield get('search/tweets', {q:'#procon26'})
-  cache.put(KEY, data)
+  cache.put(KEY, data[0])
   console.log('cache updated %s', new Date())
 }
 
